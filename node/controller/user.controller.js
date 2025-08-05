@@ -1,9 +1,9 @@
-import userModel from "../model/user.model";
+import userModel from "../model/user.model.js";
 import path from "path";
 import fs from "fs";
 import multer from "multer";
 import bcrypt from "bcryptjs";
-import businessModel from "../model/business.model";
+import businessModel from "../model/business.model.js";
 
 const storage = multer.diskStorage({
   destination: function (req, res, cb) {

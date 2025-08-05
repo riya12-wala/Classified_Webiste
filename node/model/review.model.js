@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import businessModel from "./business.model";
-import userModel from "./user.model";
+import businessModel from "./business.model.js";
+import userModel from "./user.model.js";
 const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({

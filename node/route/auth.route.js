@@ -1,6 +1,6 @@
 import express from 'express';
-import { login, signup ,getsignuplist,forgetPass,resetPass, verfication, verifyOTP} from '../controller/auth.controller';
-import { auth } from '../middleware/auth.middleware';
+import { login, signup ,getsignuplist,forgetPass,resetPass, verfication, verifyOTP} from '../controller/auth.controller.js';
+
 const router = express.Router();
 
 router.post('/login', login);

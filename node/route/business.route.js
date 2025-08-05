@@ -1,6 +1,6 @@
 import express from 'express'
-import { addBusinness, getBusiness, getBusinessById, updateBusiness, deleteBusiness,  getBusinessFilter,similarBusiness, getAllBusiness, popularBusiness, getPopularBusiness } from '../controller/business.controller'
-import { auth } from '../middleware/auth.middleware';
+import { addBusinness, getBusiness, getBusinessById, updateBusiness, deleteBusiness,  getBusinessFilter,similarBusiness, getAllBusiness } from '../controller/business.controller.js'
+
 
 const router = express.Router();
 

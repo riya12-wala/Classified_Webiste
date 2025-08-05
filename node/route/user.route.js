@@ -1,6 +1,6 @@
 import express from 'express';
-import { addUser, getUser, getUserById, updateUser, deleteUser, saved,getSaved, removeSaved, addAddress, updateAddress, updateFriend, deleteAddress, deleteFriend } from '../controller/user.controller';
-import { auth } from '../middleware/auth.middleware';
+import { addUser, getUser, getUserById, updateUser, deleteUser, saved,getSaved, removeSaved, addAddress, updateAddress, updateFriend, deleteAddress } from '../controller/user.controller.js';
+import { auth } from '../middleware/auth.middleware.js';
 const router = express.Router();
 
 router.post('/addUser', addUser);

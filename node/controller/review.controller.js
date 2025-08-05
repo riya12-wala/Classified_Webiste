@@ -1,4 +1,4 @@
-import reviewModel from "../model/review.model";
+import reviewModel from "../model/review.model.js";
 import multer from "multer";
 import fs  from "fs";
 import path from "path";

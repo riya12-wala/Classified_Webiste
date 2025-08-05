@@ -1,4 +1,4 @@
-import businessModel from "../model/business.model";
+import businessModel from "../model/business.model.js";
 import multer from "multer";
 import fs from "fs";
 import path from "path";

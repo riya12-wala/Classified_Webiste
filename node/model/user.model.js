@@ -1,5 +1,5 @@
 import mongoose  from 'mongoose'
-import businessModel from './business.model';
+import businessModel from './business.model.js';
 const Schema = mongoose.Schema;
 
 const addressSchema = new mongoose.Schema({

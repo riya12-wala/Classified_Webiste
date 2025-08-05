@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
-import {Category,SubCategory} from './categoryfinal.model' 
+import {Category,SubCategory} from './categoryfinal.model.js' 
 
 const businessSchema = new Schema({
     

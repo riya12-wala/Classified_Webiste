@@ -1,11 +1,9 @@
 import bcrypt from "bcryptjs";
-import userModel from "../model/user.model";
+import userModel from "../model/user.model.js";
 import nodemailer from "nodemailer";
 import jwt from "jsonwebtoken";
-import springedge from "springedge";
-import { parseString } from 'xml2js'; 
 import axios from 'axios'
-import businessModel from "../model/business.model";
+import businessModel from "../model/business.model.js";
 
 export const login = async (req, res) => {
   try {

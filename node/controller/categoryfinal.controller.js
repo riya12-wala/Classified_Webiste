@@ -1,4 +1,4 @@
-import { Category, SubCategory, NestedCategory } from '../model/categoryfinal.model'
+import { Category, SubCategory, NestedCategory } from '../model/categoryfinal.model.js'
 import multer from 'multer'
 import path from 'path'
 import fs from 'fs'
