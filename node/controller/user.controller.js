@@ -96,7 +96,7 @@ export const getUser = async (req, res) => {
     const userData = await userModel.find();
     res.status(200).json({
       data: userData,
-      filepath: "http://localhost:4001/uploads",
+      filepath: process.env.FILEPATH,
       message: "User fetched successfully",
       success: true,
     });
@@ -113,7 +113,7 @@ export const getUserById = async (req, res) => {
     const userData = await userModel.findOne({ _id: id });
     res.status(200).json({
       data: userData,
-      filepath: "http://localhost:4001/uploads",
+      filepath: process.env.FILEPATH,
       message: "User fetched successfully",
       success: true,
     });

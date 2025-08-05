@@ -140,7 +140,7 @@ export const subCategoriesAll = async (req, res) => {
         const category = await SubCategory.find()
         return res.status(200).json({
             data: category,
-            filepath: "http://localhost:4001/node-files",
+            filepath: process.env.FILEPATH,
             message: " fetched successfully",
             success: true,
           });

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosHttp = axios.create({
-    baseURL: 'http://localhost:4001/api/',
+    baseURL: 'https://classified-webiste.onrender.com/api',
     withCredentials:true,
 })
 

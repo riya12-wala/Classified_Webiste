@@ -36,7 +36,7 @@ export const login = async (req, res) => {
 
     res
       .status(200)
-      .json({ data: userData, token: token, message: "Login Successfull" ,filepath: 'http://localhost:4001/node-files'});
+      .json({ data: userData, token: token, message: "Login Successfull" ,filepath: process.env.FILEPATH, success: true});
   } catch (error) {
     return res.status(500).json({ message: error.message, success: false });
   }
