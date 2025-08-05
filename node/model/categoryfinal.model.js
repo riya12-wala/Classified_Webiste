@@ -53,8 +53,8 @@ const SubCategory = mongoose.model('SubCategory',subcategorySchema)
 const NestedCategory = mongoose.model('NestedCategory',nestedcategorySchema)
  
 
-module.exports = {
+export {
     Category,
     SubCategory,
     NestedCategory
-}
+};
