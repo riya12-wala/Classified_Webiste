@@ -26,7 +26,10 @@ app.use('/node-files', express.static('business'));
 app.use('/node-files', express.static('reviews'));
 app.use('/node-files', express.static('category'));
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
     .then(() => {
     console.log("DB Connected")
 })
