@@ -1,14 +1,16 @@
 {
   "name": "node",
   "version": "1.0.0",
+  "type":"module",
   "description": "",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon --exec babel-node index.js"
+    "server": "nodemon --exec babel-node index.js",
+    "start": "node index.js"
   },
   "dependencies": {
     "@babel/cli": "^7.26.4",
