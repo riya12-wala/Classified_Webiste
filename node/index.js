@@ -9,7 +9,7 @@ import session from 'express-session';
 import userRoute from './route/user.route.js' 
 // import categoryRoute from './route/category.route'
 import authRoute from './route/auth.route.js'
-import categoryFinal from './route/categoryfinal.route,js'
+import categoryFinal from './route/categoryfinal.route.js'
 import businessRoute from './route/business.route.js'
 import reviewRoute from './route/review.route.js'
 
