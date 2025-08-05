@@ -1,0 +1,17 @@
+.homebutton{
+    width: auto;
+    background-color: rgba(215, 22, 22, 1);
+    color: rgba(255, 255, 255, 1);
+    margin: 0px;
+   padding: 10px 18px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    text-decoration: none;
+    gap: 10px;
+    box-shadow: none;
+    border: none;
+    box-sizing: border-box;
+}

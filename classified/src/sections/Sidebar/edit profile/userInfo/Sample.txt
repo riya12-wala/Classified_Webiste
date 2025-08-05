@@ -1,0 +1,153 @@
+// Imports remain same...
+import { useContext, useState, useEffect } from "react";
+// Rest of your imports...
+
+function Address({ handleNext, handleBack }) {
+  const { userInfo, setuserInfo, addresses, setAddresses } = useContext(multiStepContext);
+
+  const [tagType, setTagType] = useState('');
+  const [customTag, setCustomTag] = useState('');
+  const [editIndex, setEditIndex] = useState(null);
+
+  const [showDiv, setShowDiv] = useState(true); // Always true to persist display
+
+  const handleAddOrUpdate = (values, resetForm) => {
+    const tag = values.tag === 'Others' ? customTag : values.tag;
+
+    if (!tag) {
+      alert("Please enter a tag");
+      return;
+    }
+
+    // Prevent duplicate tag unless editing
+    if (
+      editIndex === null &&
+      addresses.some((addr) => addr.tag === tag)
+    ) {
+      alert("Address with this tag already exists");
+      return;
+    }
+
+    const newAddress = { ...values, tag };
+
+    if (editIndex !== null) {
+      // Update
+      const updated = [...addresses];
+      updated[editIndex] = newAddress;
+      setAddresses(updated);
+      setEditIndex(null);
+    } else {
+      // Add new
+      setAddresses([...addresses, newAddress]);
+    }
+
+    resetForm();
+    setCustomTag('');
+    setTagType('');
+  };
+
+  const handleDelete = (index) => {
+    const filtered = addresses.filter((_, i) => i !== index);
+    setAddresses(filtered);
+  };
+
+  const handleEdit = (index) => {
+    const addr = addresses[index];
+    setuserInfo({ ...userInfo, ...addr });
+    setTagType(addr.tag === 'Home' || addr.tag === 'Work' ? addr.tag : 'Others');
+    setCustomTag(addr.tag === 'Others' ? '' : addr.tag);
+    setEditIndex(index);
+  };
+
+  return (
+    <Container fluid>
+      <Formik
+        initialValues={{
+          fname: userInfo.fname || '',
+          email: userInfo.email || '',
+          phone: userInfo.phone || '',
+          pincode: userInfo.pincode || '',
+          city: userInfo.city || '',
+          street: userInfo.street || '',
+          state: userInfo.state || '',
+          tag: userInfo.tag || '',
+          address: userInfo.address || '',
+        }}
+        validationSchema={validationSchema}
+        onSubmit={(values, { resetForm }) => {
+          handleAddOrUpdate(values, resetForm);
+        }}
+      >
+        {({ values, handleChange, handleBlur, touched, errors, resetForm }) => (
+          <Form>
+            <TextField fullWidth name="fname" label="Name" value={values.fname} onChange={handleChange} />
+            <TextField fullWidth name="phone" label="Phone" value={values.phone} onChange={handleChange} />
+            <TextField fullWidth name="email" label="Email" value={values.email} onChange={handleChange} />
+
+            <TextField fullWidth name="pincode" label="Pincode" value={values.pincode} onChange={handleChange} />
+            <TextField fullWidth name="street" label="Street" value={values.street} onChange={handleChange} />
+            <TextField fullWidth name="city" label="City" value={values.city} onChange={handleChange} />
+            <TextField fullWidth name="state" label="State" value={values.state} onChange={handleChange} />
+
+            <textarea name="address" rows="3" className="w-full border p-2" value={values.address} onChange={handleChange}></textarea>
+
+            <FormControl fullWidth>
+              <InputLabel>Tag</InputLabel>
+              <Select
+                name="tag"
+                value={tagType}
+                onChange={(e) => {
+                  setTagType(e.target.value);
+                  handleChange(e);
+                }}
+              >
+                <MenuItem value="Home">Home</MenuItem>
+                <MenuItem value="Work">Work</MenuItem>
+                <MenuItem value="Others">Others</MenuItem>
+              </Select>
+            </FormControl>
+
+            {tagType === 'Others' && (
+              <TextField
+                fullWidth
+                placeholder="Enter custom tag"
+                value={customTag}
+                onChange={(e) => setCustomTag(e.target.value)}
+              />
+            )}
+
+            <div className="py-2 flex gap-2">
+              <Button type="submit" variant="contained" color="primary">
+                {editIndex !== null ? 'Update Address' : 'Add Address'}
+              </Button>
+            </div>
+
+            <div className="py-3 space-x-2">
+              <Button variant="contained" onClick={handleBack}>Back</Button>
+              <Button variant="contained" color="secondary" onClick={handleNext}>Next</Button>
+            </div>
+
+            {showDiv && addresses.length > 0 && (
+              <div className="mt-4">
+                <h3>Saved Addresses:</h3>
+                {addresses.map((addr, index) => (
+                  <div key={index} className="p-2 border mb-2 rounded">
+                    <strong>{addr.tag}</strong>
+                    <p>{addr.address}, {addr.street}, {addr.city}, {addr.state} - {addr.pincode}</p>
+                    <p>Phone: {addr.phone}</p>
+                    <div className="space-x-2">
+                      <Button variant="outlined" onClick={() => handleEdit(index)}>Edit</Button>
+                      <Button variant="outlined" color="error" onClick={() => handleDelete(index)}>Delete</Button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </Form>
+        )}
+      </Formik>
+    </Container>
+  );
+}
+
+export default Address;

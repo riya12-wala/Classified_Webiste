@@ -1,0 +1,46 @@
+.full{
+    height: 100%;
+    
+    /* margin-bottom: 60px; */
+}
+
+/* .image{
+ position: relative;
+ width: 100%;
+    overflow: hidden;
+}
+.image::after{
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    content:"";
+    opacity:0;
+    background-color: rgba(0,0 ,0 ,0.448);
+
+}
+ .headline h3{
+    position: absolute;
+    top:40%;
+    left: 40%;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    color: white;
+}
+.headline h3::after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: -40%;
+    left: 0%;
+}
+.parent:hover .image::after {
+    opacity: 1;
+} 
+.parent:hover .headline h3 {
+    opacity: 1;
+}  */
+

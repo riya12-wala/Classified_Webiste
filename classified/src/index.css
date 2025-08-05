@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.react-slideshow-container .nav {
+  z-index: 10;
+}
+a{
+  font-family: 'Open Sans', 'Helvetica', Helvetica, Arial, sans-serif;
+}
+h1,p,a{
+  font-family: 'Exo';
+}
+.ps-menu-root _menu_legsr_27 css-vj11vy ul li{
+  justify-content: flex-start !important;
+}
+
+.react-slideshow-container{
+height: 200px;
+width: 200px;
+
+}
+.truncate-comment {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Show only 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.yarl__slide_image {
+  max-height: 80vh;
+  max-width: 90vw;
+  object-fit: contain;
+}
+
+.css-1qb8o-MuiToggleButtonGroup-root .MuiToggleButtonGroup-firstButton{
+ 
+  padding: 18px;
+
+}
+.css-1qb8o-MuiToggleButtonGroup-root .MuiToggleButtonGroup-middleButton,
+.css-1qb8o-MuiToggleButtonGroup-root .MuiToggleButtonGroup-lastButton {
+
+  padding: 18px;
+
+}
+.css-gn0oko-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
+  color: white !important;
+  background-color: rgba(187, 9, 9, 0.744) !important;
+}
+.css-1qb8o-MuiToggleButtonGroup-root{
+  flex-wrap: wrap !important;
+}
+/* 
+.ps-sidebar-container{
+  width: 300px !important;
+
+}
+.css-1jlhf24.ps-broken.ps-rtl {
+  right: -300px !important;
+}
+
+
+.css-1jlhf24.ps-broken.ps-rtl.ps-toggled{
+  right: 0 !important;
+} */
+

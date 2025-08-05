@@ -1,0 +1,76 @@
+.blogposts{
+    color: #444444;
+    background-color:white;
+    padding: 8px 0;
+   
+}
+.blogposts article{
+    background-color: white;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.postimg img{
+    width:200px;
+    height:200px;
+    object-fit: cover;
+    
+}
+.postcategory{
+    font-size: 16px;
+    color: color-mix(in srgb, #444444, transparent 40%);
+    margin:10px 0px;
+}
+
+
+article h2{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0 0 20px 0;
+    color: #444444;
+    transition: 0.3s;
+}
+
+
+.textcenter{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    
+}
+
+
+
+.textcenter img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: contain;
+}
+
+
+.author{
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.post{
+    font-size: 14px;
+    color: color-mix(in srgb, #444444, transparent 40%);
+}
+.emoji{
+    border-top: 1px solid rgba(128, 128, 128, 0.23);
+}
+.emoji svg{
+    margin: 10px 0px;
+    font-size: 25px;
+}

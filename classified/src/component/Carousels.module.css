@@ -1,0 +1,27 @@
+.blackcast{
+    /* color: black; */
+    position: relative;
+    height: 630px;
+    width: 100%;
+}
+
+.blackcast::after{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.647);
+    height: 100%;
+    width: 100%;
+}
+.blackcast img{
+height: 600px;
+width: 100%;
+object-fit: cover;
+}
+
+.caption{
+    bottom: 31%;
+    display: flex;
+    color: aliceblue;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,77 @@
+.background{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.208),rgba(0, 0, 0, 0.219)) , url('./red-shades-pattern-with-copy-space.jpg');
+    /* width: 100%; */
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+ background-color: transparent;
+ width:550px;
+  border: 1px solid black;
+  border-radius: 20px;   
+ 
+}
+.container h1{
+    color: white;
+}
+.container svg{
+    color: white;
+    font-size: 27px;
+    margin-top: 20px;
+}
+
+.btn{
+    color:white;
+    padding: 10px 20px;
+    background-color: rgb(23, 24, 33) !important;
+    border: none;
+    margin: 10px 0px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0px;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  .input::placeholder{
+    color: white;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #007bff6d;
+  }
+  .error {
+    border-color:red;
+  }
+  .success{
+      color: green;
+  }
+  .inputfeedback {
+ color: black;
+      font-size: 16px;
+  }
+  .flexed
+  {
+    display: flex;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .flexed a{
+    text-decoration: none;
+  }
+:global(.col-lg-10){
+    width:88%
+}
