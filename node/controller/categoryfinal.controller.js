@@ -162,7 +162,7 @@ export const getSubCategories = async (req, res) => {
             const category = await SubCategory.findById({ _id: id })
             return res.status(200).json({
                 data: category,
-                filepath: "http://localhost:4001/node-files",
+                filepath: "https://classified-webiste.onrender.com/node-files",
                 message: " fetched successfully",
                 success: true,
               });
